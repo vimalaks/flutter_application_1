@@ -2,9 +2,15 @@
 
 set -e
 
-echo "Installing Java (required for Android SDK)..."
+echo "Installing Java (required for Android SDK)... and #To install following run the below command:
+    #ninja — required build system
+    #clang — C/C++ compiler
+    #cmake — the build generator Flutter uses
+    #libgtk-3-dev — needed for GUI apps on Linux"
 sudo apt update
-sudo apt install -y openjdk-11-jdk unzip wget
+sudo apt install -y build-essential clang cmake ninja-build pkg-config libgtk-3-dev openjdk-11-jdk unzip wget
+
+#sudo apt install build-essential clang cmake ninja-build pkg-config libgtk-3-dev
 
 echo "Downloading Android SDK command-line tools..."
 mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
